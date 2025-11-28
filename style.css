@@ -1,137 +1,104 @@
-/* Fuente y reset básico */
-body, h1, h2, h3, p, ul, a {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Colores principales */
-:root {
-  --primary: #5865F2; /* Discord blue */
-  --secondary: #2C2F33; /* Fondo oscuro */
-  --text: #ffffff;
-  --bg: #1E1E1E;
-  --btn-hover: #4752C4;
-}
-
-/* Estilo body */
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f4f4;
+  color: #222;
 }
 
-/* Contenedor */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* HERO */
+.hero {
+  position: relative;
+  background: url('BACKGROUND.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
   text-align: center;
+  color: white;
+  z-index: 2;
 }
 
-/* Header */
-header {
-  padding: 80px 0;
-  background: var(--secondary);
-}
-
-header h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.hero p {
+  font-size: 1.3rem;
 }
 
-header .btn {
-  background: var(--primary);
-  color: #fff;
+.btn {
+  display: inline-block;
+  margin-top: 15px;
   padding: 12px 25px;
-  border-radius: 6px;
+  background: #00a2ff;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: 0.2s;
 }
 
-header .btn:hover {
-  background: var(--btn-hover);
+.btn:hover {
+  background: #0089d6;
 }
 
-/* Servicios */
-.services {
-  padding: 60px 0;
+/* SERVICES */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .services h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
+  text-align: center;
+  margin: 40px 0 20px;
 }
 
 .service-card {
-  background: var(--secondary);
-  border-radius: 10px;
+  background: white;
   padding: 25px;
-  margin: 20px auto;
-  max-width: 350px;
-  transition: transform 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card h3 {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-}
-
-.service-card p {
-  margin-bottom: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .price {
   font-weight: bold;
   font-size: 1.2rem;
+  margin: 10px 0;
 }
 
 .btn-pay {
-  background: var(--primary);
-  color: #fff;
+  display: inline-block;
   padding: 10px 20px;
-  border-radius: 6px;
+  background: #0070ba;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: .2s;
 }
 
 .btn-pay:hover {
-  background: var(--btn-hover);
+  background: #005a92;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  background: var(--secondary);
+  text-align: center;
   padding: 20px 0;
+  color: #333;
   font-size: 0.9rem;
-}
-
-footer a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  .services .service-card {
-    display: inline-block;
-    vertical-align: top;
-    margin: 20px;
-  }
 }
