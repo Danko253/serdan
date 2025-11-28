@@ -1,0 +1,137 @@
+/* Fuente y reset básico */
+body, h1, h2, h3, p, ul, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Colores principales */
+:root {
+  --primary: #5865F2; /* Discord blue */
+  --secondary: #2C2F33; /* Fondo oscuro */
+  --text: #ffffff;
+  --bg: #1E1E1E;
+  --btn-hover: #4752C4;
+}
+
+/* Estilo body */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Contenedor */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 80px 0;
+  background: var(--secondary);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+header .btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+header .btn:hover {
+  background: var(--btn-hover);
+}
+
+/* Servicios */
+.services {
+  padding: 60px 0;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background: var(--secondary);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 350px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-pay {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-pay:hover {
+  background: var(--btn-hover);
+}
+
+/* Footer */
+footer {
+  background: var(--secondary);
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .services .service-card {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+  }
+}
